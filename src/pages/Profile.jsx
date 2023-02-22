@@ -15,6 +15,7 @@ const Profile = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          textAlign: "center",
         }}
       >
         <div className="image">
@@ -29,18 +30,45 @@ const Profile = () => {
         <div className="detail">
           <div
             className="username"
-            style={{ color: "white", fontSize: "16px" }}
+            style={{ color: "white", fontSize: "16px", margin: "8px 0" }}
           >
             @{data[id].username}
           </div>
-          <div className="followsDetail">
-            <div>{data[id].follower} Followers</div>
-            <div>{data[id].following}Followers</div>
+          <div
+            className="followsDetail"
+            style={{
+              display: "flex",
+              margin: "8px 0",
+              columnGap: "20px",
+            }}
+          >
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                rowGap: "20px",
+              }}
+            >
+              <span>{data[id].follower}</span>
+              Followers
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                rowGap: "20px",
+              }}
+            >
+              <span>{data[id].following}</span>
+              Following
+            </div>
           </div>
         </div>
       </div>
       <div style={{ textAlign: "center" }}>
-        <a href="/">back</a>
+        <a href="/">Back</a>
       </div>
     </>
   );

@@ -27,8 +27,8 @@ const Home = () => {
                 />
               </div>
               <div className="text">
-                <h4>{res.username}</h4>
-                <h5>{res.follower}</h5>
+                <h4>@{res.username}</h4>
+                <h5>Followers: {res.follower}</h5>
               </div>
             </div>
           </NavLink>
